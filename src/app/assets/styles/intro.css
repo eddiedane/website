@@ -1,0 +1,20 @@
+@tailwind components;
+
+@layer components {
+  #names > span {
+    position: relative;
+    @apply pr-1;
+  }
+
+  #names > span .after {
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 95%;
+    bottom: 0;
+  }
+
+  #names > span:first-child .after {
+    inset-inline-end: 0;
+  }
+}

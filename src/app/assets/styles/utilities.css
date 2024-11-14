@@ -1,0 +1,62 @@
+@tailwind utilities;
+
+@layer utilities {
+  .cta-btn {
+    @apply !bg-orange-600 !text-stone-100 !shadow-sm hover:!bg-orange-700;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .smallcaps {
+    font-variant: small-caps;
+  }
+
+  .smallcaps-none {
+    font-variant: none;
+  }
+
+  .scroll-edge-sm {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 6%,
+      rgb(0, 0, 0) 94%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .scroll-edge-md {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 9%,
+      rgb(0, 0, 0) 91%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .scroll-edge-lg {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 12.5%,
+      rgb(0, 0, 0) 87.5%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  li:hover .dreamax-blue {
+    @apply text-blue-500;
+  }
+}

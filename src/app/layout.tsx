@@ -1,5 +1,9 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import { Metadata } from 'next';
+import '../app/assets/styles/globals.css';
+import { metropolis } from '@/app/assets/fonts';
+import { cn } from '@/lib/utils';
+import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/layout/header';
 
 export const metadata: Metadata = {
   title: 'Eddie Dane — Web Developer',
@@ -28,7 +32,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body
+        className={cn(
+          metropolis.className,
+          'antialiased overflow-hidden',
+          'text-stone-950 dark:text-stone-100',
+        )}
+      >
+        <div className='max-h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth'>
+          <Header />
+          {children}
+        </div>
+        <Toaster />
+      </body>
     </html>
   );
 }
