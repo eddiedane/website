@@ -12,10 +12,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from './ui/sheet';
+} from '@/components/ui/sheet';
 import { CgMenuRight } from 'react-icons/cg';
-import Contacts from './contacts';
-import { navigation } from '../data';
+import Contacts from '@/components/contacts';
+import { navigation } from '@/data';
 
 type DrawerProps = {
   activeSection?: string;
